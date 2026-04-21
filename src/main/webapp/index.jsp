@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
-<body style="background-color:orange;">
+<body style="background-color:sliver;">
 
-<h1>WELCOME TO JENKINS-Tomcat and PIPELINE WORLD </h1>
+<h1>WELCOME TO JENKINS and PIPELINE WORLD </h1>
 
 
 </body>
