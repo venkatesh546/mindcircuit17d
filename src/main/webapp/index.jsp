@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
-<body style="background-color:darkgreen;">
+<body style="background-color:Black;">
 
-<h1>WELCOME TO DevOps-JENKINS and PIPELINE WORLD </h1>
+<h1>WELCOME TO DevOps-JENKINS  WORLD </h1>
 
 
 </body>
