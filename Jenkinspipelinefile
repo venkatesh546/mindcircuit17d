@@ -1,0 +1,26 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('checkout git') {
+            steps {
+                echo 'checkout github repo'
+				git branch: 'main', url: 'https://github.com/venkatesh546/mindcircuit17d.git'
+            }
+        }
+		
+		stage('excule shell for mvn') {
+            steps {
+                echo 'mvn clean install on excure shell'
+				sh 'mvn clean install'
+            }
+        }
+		
+		stage('deployee war file') {
+            steps {
+                echo 'deploye war file'
+				deploy adapters: [tomcat9(alternativeDeploymentContext: '', credentialsId: 'tomcat', path: '', url: 'http://13.223.75.39:8081/')], contextPath: 'Pipeline', war: '**/*.war'
+            }
+        }
+    }
+}
