@@ -1,0 +1,28 @@
+pipeline {
+    agent {
+	label 'slave'
+	}
+
+    stages {
+        stage('Git Checkout') {
+            steps {
+                echo 'Git check from github repo'
+				git branch: 'main', url: 'https://github.com/venkatesh546/mindcircuit17d.git'
+            }
+        }
+		
+		stage('build the maven ') {
+            steps {
+                echo 'excute maven for build'
+				sh 'mvn celan install'
+            }
+        }
+		
+		stage('Deploy war file for automation') {
+            steps {
+                echo 'Deployee war file for automation tomcat'
+				deploy adapters: [tomcat9(alternativeDeploymentContext: '', credentialsId: 'tomcat', path: '', url: 'http://100.24.51.131:8080/')], contextPath: 'VenkateshK', war: '**/*.war'
+            }
+        }
+    }
+}
