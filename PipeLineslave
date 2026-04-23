@@ -14,7 +14,7 @@ pipeline {
 		stage('build the maven ') {
             steps {
                 echo 'excute maven for build'
-				sh 'mvn celan install'
+				sh 'mvn clean install'
             }
         }
 		
