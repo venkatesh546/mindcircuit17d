@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<body style="background-color:yellow;">
+<body style="background-color:green;">
 
 <h1>WELCOME TO DevOps-JENKINS  WORLD </h1>
 
